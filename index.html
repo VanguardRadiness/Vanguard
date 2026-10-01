@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguard Readiness LLC | AI Governance, Risk & Compliance Consulting (Colorado & NIST AI RMF)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617'
+                        },
+                        royal: {
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        },
+                        teal: {
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            50: '#f0fdfa'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0d9488 100%);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-teal-600 selection:text-white">
+
+    <div class="bg-navy-900 text-slate-200 text-xs sm:text-sm py-2 px-4 text-center font-medium">
+        <span class="bg-teal-600 text-white text-xs px-2 py-0.5 rounded-full font-semibold mr-2 uppercase tracking-wide">Colorado ADMT</span> 
+        Preparing organizations for 2027 automated decision-making requirements. <a href="#colorado-admt" class="underline hover:text-teal-400 font-semibold ml-1">Learn More &rarr;</a>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="h-10 w-10 rounded-lg bg-navy-900 flex items-center justify-center text-teal-400 font-bold text-xl shadow-md">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight text-navy-900 block leading-tight">VANGUARD</span>
+                        <span class="text-xs font-semibold tracking-wider text-teal-700 uppercase">Readiness LLC</span>
+                    </div>
+                </div>
+
+                <nav class="hidden xl:flex items-center space-x-6 text-sm font-medium text-slate-700">
+                    <a href="#home" class="hover:text-royal-600 transition">Home</a>
+                    <a href="#services" class="hover:text-royal-600 transition">Services</a>
+                    <a href="#colorado-admt" class="hover:text-royal-600 transition">Colorado ADMT</a>
+                    <a href="#nist-framework" class="hover:text-royal-600 transition">NIST AI Governance</a>
+                    <a href="#energy-infrastructure" class="hover:text-royal-600 transition">Energy & Infrastructure</a>
+                    <a href="#about" class="hover:text-royal-600 transition">About</a>
+                    <a href="#resources" class="hover:text-royal-600 transition">Resources</a>
+                    <a href="#contact" class="hover:text-royal-600 transition">Contact</a>
+                </nav>
+
+                <div class="hidden md:flex items-center space-x-3">
+                    <button onclick="openModal('readinessModal')" class="text-xs lg:text-sm font-semibold text-royal-600 bg-blue-50 hover:bg-blue-100 px-4 py-2.5 rounded-lg transition border border-blue-200">
+                        Readiness Check
+                    </button>
+                    <button onclick="openModal('callModal')" class="text-xs lg:text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 px-4 py-2.5 rounded-lg shadow-sm transition">
+                        Schedule Call
+                    </button>
+                </div>
+
+                <div class="xl:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-700 hover:text-slate-900 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#home" class="block py-2 text-base font-medium text-slate-700 hover:text-royal-600">Home</a>
+            <a href="#services" class="block py-2 text-base font-medium text-slate-700 hover:text-royal-600">Services</a>
+            <a href="#colorado-admt" class="block py-2 text-base font-medium text-slate-700 hover:text-royal-600">Colorado ADMT Readiness</a>
+            <a href="#nist-framework" class="block py-2 text-base font-medium text-slate-700 hover:text-royal-600">NIST AI Governance</a>
+            <a href="#energy-infrastructure" class="block py-2 text-base font-medium text-slate-700 hover:text-royal-600">Energy & Critical Infrastructure</a>
+            <a href="#about" class="block py-2 text-base font-medium text-slate-700 hover:text-royal-600">About</a>
+            <a href="#resources" class="block py-2 text-base font-medium text-slate-700 hover:text-royal-600">Resources</a>
+            <a href="#contact" class="block py-2 text-base font-medium text-slate-700 hover:text-royal-600">Contact</a>
+            <div class="pt-4 flex flex-col space-y-2">
+                <button onclick="openModal('readinessModal')" class="w-full text-center text-sm font-semibold text-royal-600 bg-blue-50 hover:bg-blue-100 py-3 rounded-lg border border-blue-200">
+                    Take the Free AI Readiness Check
+                </button>
+                <button onclick="openModal('callModal')" class="w-full text-center text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 py-3 rounded-lg shadow-sm">
+                    Schedule a Free 20-Minute Readiness Call
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative hero-gradient text-white py-24 lg:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-15 mix-blend-overlay bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-teal-500/20 border border-teal-400/30 px-3 py-1.5 rounded-full text-teal-300 text-xs font-semibold tracking-wider uppercase mb-6">
+                    <i class="fa-solid fa-award"></i>
+                    <span>Colorado & NIST AI Governance Specialists</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 text-white">
+                    Build AI Governance Your Leadership Team Can Defend.
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed font-normal">
+                    Prepare for Colorado's 2027 automated decision-making requirements while building a practical AI governance program aligned with the NIST AI Risk Management Framework.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button onclick="openModal('readinessModal')" class="inline-flex justify-center items-center bg-teal-600 hover:bg-teal-500 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition text-base">
+                        <i class="fa-solid fa-clipboard-check mr-2"></i> Take the Free AI Readiness Check
+                    </button>
+                    <button onclick="openModal('callModal')" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-xl backdrop-blur transition text-base">
+                        <i class="fa-solid fa-calendar-days mr-2"></i> Schedule a Free 20-Min Call
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-teal-700 uppercase tracking-widest mb-3">Consulting Service Packages</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-navy-900 tracking-tight">Tailored AI Governance & Compliance Solutions</h3>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        function openModal(modalId) {
+            const m = document.getElementById(modalId);
+            if(m) { m.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+        }
+        function closeModal(modalId) {
+            const m = document.getElementById(modalId);
+            if(m) { m.classList.add('hidden'); document.body.style.overflow = 'auto'; }
+        }
+    </script>
+</body>
+</html>
